@@ -1,13 +1,24 @@
 <x-layout>
   <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
     <!-- Profile Section -->
-    <div class="bg-white shadow rounded-lg px-6 py-8 mb-12">
-      <h1 class="text-3xl font-extrabold text-gray-900 mb-4">Hello, I'm a Developer</h1>
-      <p class="text-lg text-gray-600">
-        Welcome to my portfolio! I specialize in building robust web applications using Laravel, Tailwind CSS, and
-        various modern technologies.
-        This space highlights my journey, skills, and the projects I've built along the way.
-      </p>
+    <div class="bg-white shadow rounded-lg px-6 py-8 mb-12 flex flex-col md:flex-row items-center gap-8">
+      @if ($profile && $profile->avatar)
+        <div class="flex-shrink-0">
+          <img src="{{ Storage::url($profile->avatar) }}" alt="{{ $profile->name }}"
+            class="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-indigo-100 object-cover shadow-sm">
+        </div>
+      @endif
+      <div>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
+          {{ $profile->name ?? "Hello, I'm a Developer" }}
+        </h1>
+        @if ($profile && $profile->title)
+          <h2 class="text-xl text-indigo-600 font-semibold mb-4">{{ $profile->title }}</h2>
+        @endif
+        <p class="text-lg text-gray-600 leading-relaxed">
+          {{ $profile->description ?? "Welcome to my portfolio! I specialize in building robust web applications using Laravel, Tailwind CSS, and various modern technologies. This space highlights my journey, skills, and the projects I've built along the way." }}
+        </p>
+      </div>
     </div>
 
     <!-- Skills Section -->

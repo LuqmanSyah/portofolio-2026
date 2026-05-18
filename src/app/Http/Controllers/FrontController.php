@@ -11,8 +11,9 @@ class FrontController extends Controller
 {
     public function home()
     {
+        $profile = \App\Models\Profile::first();
         $skills = Skill::orderBy('category')->get();
-        return view('home', compact('skills'));
+        return view('home', compact('skills', 'profile'));
     }
 
     public function projects()
