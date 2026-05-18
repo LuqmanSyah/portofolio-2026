@@ -1,5 +1,8 @@
 # Portofolio Website
 
+Nama  : Luqman Syahreno
+NIM   : 20240801016
+
 Sebuah website portofolio yang dibangun menggunakan Framework Laravel dan Filament Admin Panel. Website ini berfungsi untuk menampilkan profil, keahlian, proyek-proyek, serta informasi kontak.
 
 ## 🗄️ Model Database
