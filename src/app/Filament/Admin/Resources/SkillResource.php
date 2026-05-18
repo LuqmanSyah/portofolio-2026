@@ -28,8 +28,7 @@ class SkillResource extends Resource
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('icon')
                     ->image()
-                    ->directory('skills')
-                    ->maxLength(255),
+                    ->directory('skills'),
                 Forms\Components\TextInput::make('category')
                     ->maxLength(255),
             ]);

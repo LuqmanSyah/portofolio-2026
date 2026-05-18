@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
 use Illuminate\Support\Facades\Response;
-
+use App\Http\Controllers\FrontController;
 /* NOTE: Do Not Remove
 / Livewire asset handling if using sub folder in domain
 */
@@ -18,6 +18,8 @@ Livewire::setScriptRoute(function ($handle) {
 /*
 / END
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [FrontController::class, 'home'])->name('home');
+Route::get('/projects', [FrontController::class, 'projects'])->name('projects');
+Route::get('/project/{slug}', [FrontController::class, 'projectDetail'])->name('project.detail');
+Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
+Route::post('/contact', [FrontController::class, 'submitContact'])->name('contact.submit');

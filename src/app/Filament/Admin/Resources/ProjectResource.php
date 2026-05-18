@@ -35,8 +35,7 @@ class ProjectResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('thumbnail')
                     ->image()
-                    ->directory('projects/thumbnails')
-                    ->maxLength(255),
+                    ->directory('projects/thumbnails'),
                 Forms\Components\TextInput::make('github_url')
                     ->url()
                     ->maxLength(255),
@@ -44,8 +43,7 @@ class ProjectResource extends Resource
                     ->required(),
                 Forms\Components\FileUpload::make('pdf_report')
                     ->directory('projects/reports')
-                    ->acceptedFileTypes(['application/pdf'])
-                    ->maxLength(255),
+                    ->acceptedFileTypes(['application/pdf']),
                 Forms\Components\TextInput::make('progress_status')
                     ->maxLength(255),
                 Forms\Components\Toggle::make('is_published')
