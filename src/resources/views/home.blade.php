@@ -4,7 +4,9 @@
     <div class="bg-white shadow rounded-lg px-6 py-8 mb-12 flex flex-col md:flex-row items-center gap-8">
       @if ($profile && $profile->avatar)
         <div class="flex-shrink-0">
-          <img src="{{ Storage::url($profile->avatar) }}" alt="{{ $profile->name }}"
+          <img
+            src="{{ str_starts_with($profile->avatar, 'image/') ? asset($profile->avatar) : Storage::url($profile->avatar) }}"
+            alt="{{ $profile->name }}"
             class="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-indigo-100 object-cover shadow-sm">
         </div>
       @endif

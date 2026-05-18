@@ -14,14 +14,14 @@ class ProjectSeeder extends Seeder
     public function run(): void
     {
         Project::create([
-            'title' => 'My First Project',
-            'slug' => 'my-first-project',
-            'short_description' => 'This is a short description for my first project.',
+            'title' => 'Sistem Kolaborasi Tim Developer: Implementasi Kanban Board dan Issue Tracker',
+            'slug' => 'sistem-kolaborasi-tim-developer',
+            'short_description' => 'Platform kolaborasi in-house yang terpusat, responsif, dan terintegrasi langsung dengan GitHub via Two-Way Sync menggunakan arsitektur TALL Stack.',
             'thumbnail' => null,
-            'github_url' => 'https://github.com/example/project1',
+            'github_url' => null,
             'is_final_project' => true,
             'pdf_report' => null,
-            'progress_status' => 'Completed',
+            'progress_status' => 'In Progress',
             'is_published' => true,
         ]);
     }

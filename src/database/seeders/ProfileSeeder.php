@@ -13,9 +13,10 @@ class ProfileSeeder extends Seeder
     public function run(): void
     {
         \App\Models\Profile::create([
-            'name' => 'John Doe',
-            'title' => 'Full Stack Developer',
-            'description' => "Welcome to my portfolio! I specialize in building robust web applications using Laravel, Tailwind CSS, and various modern technologies. This space highlights my journey, skills, and the projects I've built along the way.",
+            'name' => 'Luqman Syahreno',
+            'title' => 'Full-Stack Developer',
+            'description' => "I'm a passionate full-stack developer who loves creating modern web applications.\n\n🔭 Currently working on Web Development projects\n💡 Love turning ideas into reality through code",
+            'avatar' => 'image/profil/profil.jpg',
         ]);
     }
 }
