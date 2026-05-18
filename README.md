@@ -51,7 +51,7 @@ Bagian _front-end_ yang dilihat oleh pengunjung menggunakan Blade templates Lara
 
 ## 🚀 Teknologi yang Digunakan
 
-- **Backend**: Laravel 11.x
+- **Backend**: Laravel 12.x
 - **Admin Panel**: Filament v3.x
 - **Frontend / Styling**: Tailwind CSS, PostCSS, Vite
 - **Docker**: Konfigurasi kontainer untuk lingkungan server (Nginx, PHP, MariaDB/MySQL).
