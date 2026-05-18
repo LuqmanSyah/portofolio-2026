@@ -21,5 +21,6 @@ Livewire::setScriptRoute(function ($handle) {
 Route::get('/', [FrontController::class, 'home'])->name('home');
 Route::get('/projects', [FrontController::class, 'projects'])->name('projects');
 Route::get('/project/{slug}', [FrontController::class, 'projectDetail'])->name('project.detail');
+Route::get('/report/{slug}', [FrontController::class, 'reportDetail'])->name('report.detail');
 Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
 Route::post('/contact', [FrontController::class, 'submitContact'])->name('contact.submit');

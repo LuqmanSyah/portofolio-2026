@@ -19,13 +19,20 @@ class FrontController extends Controller
     public function projects()
     {
         $projects = Project::where('is_published', true)->latest()->get();
-        return view('projects', compact('projects'));
+        $report = \App\Models\Report::first();
+        return view('projects', compact('projects', 'report'));
     }
 
     public function projectDetail($slug)
     {
         $project = Project::where('slug', $slug)->where('is_published', true)->firstOrFail();
         return view('project-detail', compact('project'));
+    }
+
+    public function reportDetail($slug)
+    {
+        $report = \App\Models\Report::where('slug', $slug)->firstOrFail();
+        return view('report-detail', compact('report'));
     }
 
     public function contact()
