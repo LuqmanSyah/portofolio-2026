@@ -13,31 +13,31 @@ class FrontController extends Controller
     {
         $profile = \App\Models\Profile::first();
         $skills = Skill::orderBy('category')->get();
-        return view('home', compact('skills', 'profile'));
+        return view('page.home', compact('skills', 'profile'));
     }
 
     public function projects()
     {
         $projects = Project::where('is_published', true)->latest()->get();
         $report = \App\Models\Report::first();
-        return view('projects', compact('projects', 'report'));
+        return view('page.projects', compact('projects', 'report'));
     }
 
     public function projectDetail($slug)
     {
         $project = Project::where('slug', $slug)->where('is_published', true)->firstOrFail();
-        return view('project-detail', compact('project'));
+        return view('page.project-detail', compact('project'));
     }
 
     public function reportDetail($slug)
     {
         $report = \App\Models\Report::where('slug', $slug)->firstOrFail();
-        return view('report-detail', compact('report'));
+        return view('page.report-detail', compact('report'));
     }
 
     public function contact()
     {
-        return view('contact');
+        return view('page.contact');
     }
 
     public function submitContact(Request $request)

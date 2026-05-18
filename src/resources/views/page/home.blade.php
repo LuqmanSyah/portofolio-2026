@@ -1,4 +1,5 @@
-<x-layout>
+@extends('layout.app')
+@section('content')
   <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
     <!-- Profile Section -->
     <div class="bg-white shadow rounded-lg px-6 py-8 mb-12 flex flex-col md:flex-row items-center gap-8">
@@ -53,4 +54,4 @@
       @endif
     </div>
   </div>
-</x-layout>
+@endsection

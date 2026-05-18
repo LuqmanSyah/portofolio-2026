@@ -1,4 +1,5 @@
-<x-layout>
+@extends('layout.app')
+@section('content')
   <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
 
     <h1 class="text-3xl font-extrabold text-gray-900 mb-8">My Projects</h1>
@@ -72,4 +73,4 @@
       <p class="text-gray-500 mt-4">No projects available yet.</p>
     @endif
   </div>
-</x-layout>
+@endsection

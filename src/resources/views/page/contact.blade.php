@@ -1,4 +1,5 @@
-<x-layout>
+@extends('layout.app')
+@section('content')
   <div class="max-w-3xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
     <h1 class="text-3xl font-extrabold text-gray-900 mb-8 text-center">Get in Touch</h1>
 
@@ -65,4 +66,4 @@
       </form>
     </div>
   </div>
-</x-layout>
+@endsection
