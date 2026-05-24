@@ -15,7 +15,7 @@ class ProfileSeeder extends Seeder
         \App\Models\Profile::create([
             'name' => 'Luqman Syahreno',
             'title' => 'Full-Stack Developer',
-            'description' => "I'm a passionate full-stack developer who loves creating modern web applications.\n\n🔭 Currently working on Web Development projects\n💡 Love turning ideas into reality through code",
+            'description' => "I'm a passionate full-stack developer who loves creating modern web applications. 🔭 Currently working on Web Development projects 💡 Love turning ideas into reality through code",
             'avatar' => 'image/profil/profil.jpg',
         ]);
     }
